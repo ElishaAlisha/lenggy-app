@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Build APK
       uses: ArtemSBulgakov/buildozer-action@v1
@@ -18,7 +18,7 @@ jobs:
         buildozer_version: master
     
     - name: Upload APK
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: lenggy-app
         path: bin/*.apk
